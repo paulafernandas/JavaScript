@@ -1,0 +1,117 @@
+/* O (*) aplica esse vloco de estilos básicos a todos os eelemntos do HTML
+ */
+
+*{
+  margin: 0 auto; /* Remove as margens e centraliza os elementos horizontalmente.*/  
+  width: 100%;/* Define a largura. */
+  box-sizing: border-box; /* Inclui margens e bordas na largura e altura dos elementos.*/
+  font-family: sans-serif; /* Define a fonta Sans-serif como padrão do documento. */
+}
+
+body{ /*Neste bloco estilizamos o elemento BODY da nossa página.*/
+  background-color: #18181B; /* Definimos a cor de fundo*/
+  width: 100%; /*Configura a largura e altura do body para ocupar 100% da viewport.*/
+  height: 100vh; 
+  display: flex; /* Cria um layout flexível. */
+  justify-content: center; /*Centraliza horizontalmente os elementos. */
+  align-items: center; /* Centraliza verticalmente os elementos. */
+  flex-direction: column; /* Organiza os elementos em uma colunaa. */
+}
+
+.logo{ /* Definimos o tamanho da imagem/logo que foi inserida */
+  max-width: 600px;
+  margin-bottom: 24px;
+}
+
+.container-input{
+  max-width: 480px; /*Define a largura máxima de 480 pixels. */
+  margin: 14px 0; /* Define um espaçamento vertical (margem) de 14 pixels para cima e para baixo do elemento. */
+}
+
+.container-input span {
+  color: #FFF; /* Define que a cor do texto é branca. */
+  font-size: 22px; /* Define que o tamanho da fonte será 22 pixels. */
+}
+
+.slider {
+  margin-top: 8px; /* Adiciona uma margem superior de 8 pixels. */
+  -webkit-appearance: none; /* Remove o estilo padrão do navegador. */
+  width: 100%; /* Define a largura para 100%*/
+  height: 18px; /* Define a altura para 18 pixels. */
+  border-radius: 5px; /* Arredonda as bordas. */
+  background: #DFDFDF; /* Define o fundo como cinza claro. */
+  outline: none; /* Remove o contorno padrão. */
+  opacity: 0.7; /* Define a opacidade do controle deslizante em 70%. */
+}
+
+.button-cta{
+  height: 40px; /* Define que a altura de nosso botão será de 40 pixels. */
+  margin-top: 40px; /* Adiciona um espaçamento de 40 pixels acima do botão. */
+  background-color: #3EB72B; /* Define a cor do botão como verde. */
+  border:0; /* Remove a borda padrão. */
+  border-radius: 4px; /* Adiciona raio de 4 pixels às bordas para deixa-las arredondadas. */
+  color: #FFF; /* Define a cor do texto como branca. */
+  font-size: 20px; /* Define o tamanho da fonte como 20 pixels. */
+  font-weight: bold; /* Define que o estilo da fonte será negrito. */
+  cursor: pointer; /* Aqui definimos que o cursor mudará para o estilo mão, quando passarmos o mesmo sob o botão. */
+}
+
+.container-password{
+  max-width: 480px; /* Define a largura máxima desse bloco para 480 pixels.*/
+  margin: 14px 0; /* Adiciona uma margem de 14 pixels, acima e abaixo. */
+  display: flex; /* Usado para crar um layout flexível. */
+  flex-direction: column; /* Organiza os elementos, mantendo-os em uma coluna. */
+  align-items: center; /* Alinha os elementos de forma horizontal.*/
+  cursor: pointer; /* Define que o cursor mudará para uma mão ao passarmos com o mesmo por cima do item. */
+}
+
+.title{
+  text-align: center; /* Centraliza o texto.*/
+  color: #FFF; /* Define a cor do texto como branco. */
+  font-size: 28px; /* Define o tamanho da fonte como 28 pixels.*/
+  margin-top: 24px; /* Adiciona uma margem de 24 pixels acima do elemento. */
+  margin-bottom: 8px; /* Adiciona uma margem de 8 pixels abaixo do elemento. */
+} 
+
+.password{
+  height: 60px; /* Define a altura do elemento em 60 pixels. */
+  background-color: rgba(0,0,0,0.40); /*Define a cor de fundo como preto com 40% de opacidade.*/
+  border: 1px solid #313131; /* Aplica uma borda de 1 pexel sólida, com a cor cinza escuro. */
+  
+  display: flex; /* Deixa o layout flexivel. */
+  justify-content: center; /* Centraliza o conteúdo do elemento. */
+  align-items: center; /* Centraliza o conteúdo do elemento. */
+  color: #FFF; /* Define a cor do texto como branca. */
+  border-radius: 4px; /* Aplica um raio de 4 pixels às bordas, tornando-as arredondadas.*/
+  transition: transform 0.5s; /* Adiciona uma transição sutil para transformação, de 0,5 segundos*/
+}
+
+.password:hover{
+  transform: scale(1.05); /* O elemento aumenta em 5% o tamanho do elemento. */
+  border-color: #FFF; /* Muda a cor da borda para a cor branca. */
+}
+
+.hide{
+  display: none; /* Definimos que a propriedade dysplay, não será exibida até ser chamada.*/
+}
+
+.tooltip{
+  color: #FFF; /* Define a cor do texto como branca. */
+  position: relative; /* Posiciona o elemento de forma relativa ao contexto da tela. */
+  top: 20px; /* Define que será aplicado 20 pixels abaixo. */
+  padding: 6px 8px; /* Define que o preenchimento interno será de 6 pixels no  topo e na base
+  e 8 pixels nas laterais, respectivamente. */
+  font-size: 16px; /* Define qu eo tamanho da fonte será 16 pixels. */
+  border-radius: 6px; /* Aplica bordas arredondadas de 6 pixels. */
+  background: rgb(15, 15, 15); /* Define um fundo de tom escuro. */
+  opacity: 0; /* Define a opacidade em 0%. */
+  visibility: hidden; /* Torna nosso elemnto transparente. */
+  transition: all .5s ease-in-out; /* Aplica uma transição suave de 0,5 segundos. */
+  text-align: center; /* Centraliza o texto. */
+}
+
+.container-password:hover .tooltip{
+  bottom: 50px; /* Define para 50 pixels acima de posição normal. */
+  visibility: visible; /* Define a visibilidade como "Visivel"*/
+  opacity: 1; /* Define a opacidade para 1%. */
+} 
